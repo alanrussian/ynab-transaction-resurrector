@@ -1,4 +1,4 @@
-# ynab-transaction-resurrecter
+# ynab-transaction-resurrector
 
 Allows you to resurrect YNAB transactions that you rejected or deleted.
 
