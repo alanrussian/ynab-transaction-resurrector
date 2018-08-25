@@ -419,7 +419,7 @@
       window.location = oauthUrl;
       return;
     }
-    const accessToken = window.location.hash.substring('#access_token='.length);
+    const accessToken = window.location.hash.substring('#access_token='.length).split('&')[0];
 
     ReactDOM.render(e(App, {api: new ynab.API(accessToken)}), document.querySelector("#app"));
   }
