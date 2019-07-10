@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const clientId = '60b252599fc55fd7f79c91370e37e141408cf38df7e0fa129130afd960bb683e';
+  const clientId = '07592e512632cbce9dc6a8ff5064296c78ef1c2ba8b88b2004d1429ed6fbffed';
   const currentUrl = `${location.protocol}//${location.host}${location.pathname}`;
   const oauthUrl = `https://app.youneedabudget.com/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(currentUrl)}&response_type=token`;
 
