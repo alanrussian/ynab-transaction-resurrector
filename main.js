@@ -185,7 +185,7 @@
         } else {
           payeeName = '';
         }
-        if (transaction.memo.length > 200) {
+        if (transaction.memo && transaction.memo.length > 200) {
           transaction.memo = transaction.memo.substring(0, 200);
         }
         result.push({
