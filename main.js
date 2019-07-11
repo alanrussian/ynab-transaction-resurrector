@@ -236,7 +236,7 @@
           amount: transaction.amount,
           payee_id: transaction.payee_id,
           category_id: transaction.category_id,
-          memo: transaction.memo,
+          memo: transaction.memo.substring(0, 200),
           cleared: transaction.cleared,
           approved: false,
           flag_color: 'red',
