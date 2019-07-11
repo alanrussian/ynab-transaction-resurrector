@@ -9,3 +9,7 @@ This uses the YNAB API to read your transactions. It presents you with your tran
 - The new transactions that get created will need to be approved and are flagged with the color red.
 
 - Since the old, deleted transactions aren't themselves resurrected, they'll continue to show up in the app if you refresh it.
+
+## Hosted version
+
+https://basvo.github.io/ynab-transaction-resurrector/
