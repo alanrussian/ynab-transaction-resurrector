@@ -176,7 +176,7 @@
       const transactions = this.props.data.transactions.filter(transaction => transaction.deleted);
       const result = [];
       for (var i = 0; i < transactions.length; i++) {
-        const transaction = transactions[i];
+        var transaction = transactions[i];
         var payeeName;
         if (transaction.payee_id) {
           payeeName = payeeById[transaction.payee_id];
@@ -185,13 +185,16 @@
         } else {
           payeeName = '';
         }
+        if (transaction.memo.length > 200) {
+          transaction.memo = transaction.memo.substring(0, 200);
+        }
         result.push({
           id: transaction.id,
           accountName: accountById[transaction.account_id],
           date: transaction.date,
           payeeName: payeeName,
           categoryName: categoryById[transaction.category_id],
-          memo: transaction.memo.substring(0, 200),
+          memo: transaction.memo,
           amount: transaction.amount,
           isCheckable: !transaction.transfer_account_id,
           original: transaction,
