@@ -13,3 +13,9 @@ This uses the YNAB API to read your transactions. It presents you with your tran
 ## Hosted version
 
 https://basvo.github.io/ynab-transaction-resurrector/
+
+## Credits
+
+Original credits to Alan Russian (https://github.com/alanrussian/ynab-transaction-resurrector)
+
+I just fixed a small issue with Material UI and ran into the memo max length issue when restoring 100+ transactions I accidentally removed from YNAB.
