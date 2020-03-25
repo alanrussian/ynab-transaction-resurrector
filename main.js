@@ -21,7 +21,7 @@
     TableCell,
     TableHead,
     TableRow,
-  } = window['material-ui'];
+  } = MaterialUI;
   
   const e = React.createElement;
   
@@ -185,6 +185,12 @@
         } else {
           payeeName = '';
         }
+        
+        if (transaction.memo != null && transaction.memo.length > 200) {
+          // Ensure memo does not exceed 200 characters or we will get a validation error
+          transaction.memo = transaction.memo.substring(0, 200);
+        }
+
         result.push({
           id: transaction.id,
           accountName: accountById[transaction.account_id],
