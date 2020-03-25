@@ -21,7 +21,7 @@
     TableCell,
     TableHead,
     TableRow,
-  } = window['material-ui'];
+  } = MaterialUI;
   
   const e = React.createElement;
   
